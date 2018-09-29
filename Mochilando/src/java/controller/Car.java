@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package BeansGerenciaveis;
+package controller;
 
 /**
  *
  * @author Aluno
  */
-public class TESTE {
-    
+public class Car {
+    Car(String marca, String tipo, int ano, String cor, int valor, boolean vende){
+        
+    }
+        
 }
