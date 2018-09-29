@@ -1,19 +1,57 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Editar Tags</title>
     </h:head>
+    <style>
+        .myRadio {
+            display:none;
+        }
+        .myRadio + label img{
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .highlighted {
+            border: 1px solid;
+            border-color: red;
+        }
+    </style>
+    <script>
+        $(document).on("change", ".myRadio input", function () {
+            $(this).closest(".radioColumn").find("img").toggleClass("highlighted");
+        });
+    </script>
     <h:body>
+        <p:spinner/>
+        <h1 align="center">Selecione as suas Tags</h1>
+        <br/>
         <h:form>
-            <h:outputLabel>Selecione as suas Tags</h:outputLabel>
-            <h:panelGrid columns="5">
-                <h:outputLabel>
-                    <h:graphicImage library="img" name="Montanha.jpg"/>
-                    <!--alt="..." class="img-thumbnail img-check" <input type="checkbox" name="tag" id="item1" value="Montanha" class="hidden" autocomplete="off">--> 
-                    <h:outputText>Montanha</h:outputText>
-                </h:outputLabel>
+            <h:panelGrid>   
+                <p:row>
+                    <p:column styleClass="radioColumn">
+                        <p:selectBooleanCheckbox styleClass="myRadio" id="id1" />
+                        <p:outputLabel for="id1" value="check one" >
+                            <p:graphicImage width="50" height="50" name="img/montanha.png"/> 
+                        </p:outputLabel>
+                    </p:column>
+                    <p:column styleClass="radioColumn">
+                        <p:selectBooleanCheckbox styleClass="myRadio" id="id2"/>
+                        <p:outputLabel for="id2" value="check two" >
+                            <p:graphicImage width="50" height="50" name="img/cidade.png"/> 
+                        </p:outputLabel>
+                    </p:column>
+                    <p:column styleClass="radioColumn">
+                        <p:selectBooleanCheckbox styleClass="myRadio" id="id3" />
+                        <p:outputLabel for="id3" value="check three" >
+                            <p:graphicImage width="50" height="50" name="img/interior.png"/> 
+                        </p:outputLabel>
+                    </p:column>
+                </p:row>
             </h:panelGrid>
         </h:form>
     </h:body>
