@@ -7,12 +7,12 @@
     <h:body>
         <h1 align="center">Criar Diario</h1>
         <h:form>
-        <p:inputText id="keyword" value="#{watermarkView.keyword}" required="true"/>
-        <p:watermark for="keyword" value="Título" id="watermark"/>
+            <p:inputText id="titulo" value="#{criarDiarioMB.titulo}" required="true"/>
+        <p:watermark for="titulo" value="Título" id="watermark"/>
         <br />
         <br />
         <h:outputText value="Tipo de Diário:"/>  
-        <p:selectOneButton value="#{selectOneView.option}">
+        <p:selectOneButton value="#{criarDiarioMB.tipoDiario}">
             <f:selectItem itemLabel="Sozinho(a)" itemValue="Sozinho(a)" />
             <f:selectItem itemLabel="Com amigos" itemValue="Com amigos" />
             <f:selectItem itemLabel="Com a família" itemValue="Com a família" />
@@ -20,12 +20,12 @@
         <br />
         <br />
         <p:outputLabel for="inicioData" value="Período: " />
-        <p:calendar id="inicioData" value="#{calendarView.date3}" showOn="button" />
+        <p:calendar id="inicioData" value="#{criarDiarioMB.dataInicio}" showOn="button" />
         <p:outputLabel for="fimData" value="   a   " />
-        <p:calendar id="fimData" value="#{calendarView.date3}" showOn="button" />
+        <p:calendar id="fimData" value="#{criarDiarioMB.dataFim}" showOn="button" />
         <br />
         <br />
-        <p:inputTextarea id="detalhesViagem" value="#{watermarkView.detalhes}" required="true"/>
+        <p:inputTextarea id="detalhesViagem" value="#{criarDiarioMB.detalhesViagem}" required="true"/>
         <p:watermark for="detalhesViagem" value="Mais sobre a viagem" id="watermark1"/>
         <br />
         <br />
