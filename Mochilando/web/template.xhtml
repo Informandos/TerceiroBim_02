@@ -7,25 +7,22 @@
     <h:head>
         <title>Mochilando</title>
     </h:head>
-    <style>
-        .myButton {
-            display:none;
-        }
-    </style>
     <h:body>
         <div align="center">
-            <p:commandButton id="pgIn" styleClass="myButton" action="#{templateMB.moveToIndex()}"/>
-        <p:outputLabel for="pgIn">
-            <h:graphicImage  width="50" height="50" url="img/mochila.png"/>
-        </p:outputLabel>
-        <p:outputLabel>
-            <h:inputText id="pesquisar" style="width: 500px ; height: 40px"/>
-            <p:watermark for="pesquisar" value="Pesquisar" id="watermark"/>
-            <p:button icon="ui-icon-search" style="width: 42px ; height: 42px"/>
-        </p:outputLabel>
-        <p:commandButton icon="ui-icon-person" style="width: 42px ; height: 42px" action="#{templateMB.moveToPerfil()}"/>
-        <p:commandButton icon="ui-icon-plus" style="width: 42px ; height: 42px" action="#{templateMB.moveToCriarDiario()}"/>
-        <p:commandButton icon="ui-icon-help" style="width: 42px ; height: 42px" action="#{templateMB.moveToAjuda()}"/>
+            <h:form>
+                <p:commandButton id="pgIn" style="display: none" action="index.jsf"/>
+                <p:outputLabel for="pgIn">
+                    <h:graphicImage  width="50" height="50" url="img/mochila.png"/>
+                </p:outputLabel>
+                <p:outputLabel>
+                    <h:inputText id="pesquisar" style="width: 500px ; height: 40px"/>
+                    <p:watermark for="pesquisar" value="Pesquisar" id="watermark"/>
+                    <p:button icon="ui-icon-search" style="width: 42px ; height: 42px"/>
+                </p:outputLabel>
+                <p:commandButton icon="ui-icon-person" style="width: 42px ; height: 42px" action="perfil.jsf"/>
+                <p:commandButton icon="ui-icon-plus" style="width: 42px ; height: 42px" action="CriarDiario.jsf"/>
+                <p:commandButton icon="ui-icon-help" style="width: 42px ; height: 42px" action="ajuda.jsf"/>
+            </h:form>
         </div>
         <ui:insert name="corpo"></ui:insert>
     </h:body>
