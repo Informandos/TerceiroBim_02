@@ -5,15 +5,18 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import org.primefaces.model.UploadedFile;
 
 @SessionScoped
 @ManagedBean
 public class CriarDiarioMB {
-    String titulo;
-    String tipoDiario;
-    Date dataInicio;
-    Date dataFim;
-    String detalhesViagem;
+    private String titulo;
+    private String tipoDiario;
+    private Date dataInicio;
+    private Date dataFim;
+    private String detalhesViagem;
+    private String detalhesDia;
+    private UploadedFile midia;
 
     public String getTitulo() {
         return titulo;
@@ -53,6 +56,22 @@ public class CriarDiarioMB {
 
     public void setDetalhesViagem(String detalhesViagem) {
         this.detalhesViagem = detalhesViagem;
+    }
+
+    public String getDetalhesDia() {
+        return detalhesDia;
+    }
+
+    public void setDetalhesDia(String detalhesDia) {
+        this.detalhesDia = detalhesDia;
+    }
+    
+    public UploadedFile getMidia() {
+        return midia;
+    }
+
+    public void setMidia(UploadedFile midia) {
+        this.midia = midia;
     }
     
     
