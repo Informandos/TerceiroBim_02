@@ -1,23 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.util.Date;
-import model.domin.usuario.java;
-/**
- *
- * @author Aluno
- */
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import model.domain.Cidade;
+import org.primefaces.model.UploadedFile;
+
+@SessionScoped
+@ManagedBean
 public class CadastroMB {
     private Long codUsuario;
     private String nomUsuario;
     private String sobrenomeUsuario;
     private String txtEmail;
     private String txtSenha;
-    private Byte imgPerfil;
+    private UploadedFile imgPerfil;
     private String sexo;
     private Date datNascimento;
     private Cidade cidade;
@@ -62,11 +59,11 @@ public class CadastroMB {
         this.txtSenha = txtSenha;
     }
 
-    public Byte getImgPerfil() {
+    public UploadedFile getImgPerfil() {
         return imgPerfil;
     }
 
-    public void setImgPerfil(Byte imgPerfil) {
+    public void setImgPerfil(UploadedFile imgPerfil) {
         this.imgPerfil = imgPerfil;
     }
 
