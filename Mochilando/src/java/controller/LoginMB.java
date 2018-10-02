@@ -7,15 +7,15 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean
 public class LoginMB {
     
-    private String usuario;
+    private String email;
     private String senha;
 
     public String getUsuario() {
-        return usuario;
+        return email;
     }
 
     public void setUsuario(String usuario) {
-        this.usuario = usuario;
+        this.email = usuario;
     }
 
     public String getSenha() {

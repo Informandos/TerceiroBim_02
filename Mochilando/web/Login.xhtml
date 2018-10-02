@@ -14,7 +14,7 @@
             <p:dialog header="Login" widgetVar="dlg" resizable="false">
                 <h:panelGrid columns="2" cellpadding="5">
                     <h:outputLabel for="username" value="Usuario:" />
-                    <p:inputText id="username" value="#{loginMB.usuario}" required="true" label="username" />
+                    <p:inputText id="email" value="#{loginMB.usuario}" required="true" label="email" />
                     <h:outputLabel for="password" value="Senha:" />
                     <p:password id="password" value="#{loginMB.senha}" required="true" label="password" />
                     <h:outputLink value="recuperacaoSenha.jsf">
